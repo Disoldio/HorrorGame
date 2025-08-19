@@ -147,8 +147,8 @@ GameObject:
   m_Component:
   - component: {fileID: 660396593116185290}
   - component: {fileID: 3378301663862998888}
-  - component: {fileID: 162486540673286645}
   - component: {fileID: 7375612112225368711}
+  - component: {fileID: 162486540673286645}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -199,21 +199,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &162486540673286645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8629399909752382751}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23040f202bc82b24799de08f68aa6a2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  speed: 5
-  camera: {fileID: 200047983385041763}
-  clamp: 75
 --- !u!136 &7375612112225368711
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -237,3 +222,18 @@ CapsuleCollider:
   m_Height: 2.76
   m_Direction: 1
   m_Center: {x: 0, y: -0.4, z: 0}
+--- !u!114 &162486540673286645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8629399909752382751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23040f202bc82b24799de08f68aa6a2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  speed: 10
+  cam: {fileID: 200047983385041763}
+  clamp: 75

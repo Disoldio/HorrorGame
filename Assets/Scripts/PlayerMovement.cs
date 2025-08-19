@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float speed;
     [SerializeField]
-    private Camera camera;
+    private Camera cam;
     [SerializeField]
     private float clamp = 75f;
 
@@ -20,25 +20,31 @@ public class PlayerMovement : MonoBehaviour
         x = angles.x;
         y = angles.y;
     }
-    void Update()
+    private void Update()
     {
+        rb.linearVelocity = currentVelocity();
+
+
+        cam.transform.localRotation = calcCameraRotation();
+        transform.rotation = calcBodyRotation();
+    }
+
+    private Vector3 currentVelocity() {
         Vector3 vertical = gameObject.transform.forward * speed * Input.GetAxisRaw("Vertical");
         Vector3 horizontal = gameObject.transform.right * speed * Input.GetAxisRaw("Horizontal");
-        rb.AddForce(vertical + horizontal);
 
-        x += Input.GetAxis("Mouse X");
+        return vertical + horizontal + Physics.gravity;
+    }
+
+    private Quaternion calcCameraRotation() {
         y -= Input.GetAxis("Mouse Y");
-
         y = Mathf.Clamp(y, -clamp, clamp);
 
-        Quaternion camRotation = Quaternion.Euler(y, camera.transform.rotation.y, 0);
+        return Quaternion.Euler(y, cam.transform.rotation.y, 0);
+    }
 
-        camera.transform.localRotation = camRotation;
-
-
-        Quaternion objRotation = Quaternion.Euler(transform.rotation.x, x, 0);
-
-        transform.rotation = objRotation;
-
+    private Quaternion calcBodyRotation() {
+        x += Input.GetAxis("Mouse X");
+        return Quaternion.Euler(transform.rotation.x, x, 0);
     }
 }
