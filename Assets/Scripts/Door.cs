@@ -8,8 +8,8 @@ public class Door : Sounds, Interactable
     [SerializeField]
     private bool isOpen;
 
-    private const string OPEN_DOOR_DESCRIPTION = "Нажмите [E] чтобы <color=red>закрыть</color> дверь";
-    private const string CLOSED_DOOR_DESCRIPTION = "Нажмите [E] чтобы <color=green>открыть</color> дверь";
+    private const string OPEN_DOOR_DESCRIPTION = "РќР°Р¶РјРёС‚Рµ [E] С‡С‚РѕР±С‹ <color=red>Р·Р°РєСЂС‹С‚СЊ</color> РґРІРµСЂСЊ";
+    private const string CLOSED_DOOR_DESCRIPTION = "РќР°Р¶РјРёС‚Рµ [E] С‡С‚РѕР±С‹ <color=green>РѕС‚РєСЂС‹С‚СЊ</color> РґРІРµСЂСЊ";
     void Start()
     {
         animator.SetBool("isOpen", isOpen);
