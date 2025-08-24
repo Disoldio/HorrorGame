@@ -2,35 +2,28 @@ using UnityEngine;
 
 public class Door : Sounds, Interactable
 {
-    public Animator animator;
-    public bool isOpen;
+    [SerializeField]
+    private Animator animator;
 
+    [SerializeField]
+    private bool isOpen;
+
+    private const string OPEN_DOOR_DESCRIPTION = "РќР°Р¶РјРёС‚Рµ [E] С‡С‚РѕР±С‹ <color=red>Р·Р°РєСЂС‹С‚СЊ</color> РґРІРµСЂСЊ";
+    private const string CLOSED_DOOR_DESCRIPTION = "РќР°Р¶РјРёС‚Рµ [E] С‡С‚РѕР±С‹ <color=green>РѕС‚РєСЂС‹С‚СЊ</color> РґРІРµСЂСЊ";
     void Start()
     {
-        if (isOpen)
-        {
-            animator.SetBool("isOpen", true);
-        }
+        animator.SetBool("isOpen", isOpen);
     }
 
     public string GetDescription()
     {
-        if (isOpen) return "Нажмите [E] чтобы <color=red>закрыть</color> дверь";
-        return "Нажмите [E] чтобы <color=green>открыть</color> дверь";
+        return isOpen ? OPEN_DOOR_DESCRIPTION : CLOSED_DOOR_DESCRIPTION;
     }
 
     public void Interact()
     {
         isOpen = !isOpen;
-        if (isOpen)
-        {
-            animator.SetBool("isOpen", true);
-            PlaySound(sounds[0]);
-        }
-        else
-        {
-            animator.SetBool("isOpen", false);
-            PlaySound(sounds[0]);
-        }
+        animator.SetBool("isOpen", isOpen);
+        PlaySound(sounds[0]);
     }
 }
