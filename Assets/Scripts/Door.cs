@@ -2,11 +2,8 @@ using UnityEngine;
 
 public class Door : Sounds, Interactable
 {
-    [SerializeField]
-    private Animator animator;
-
-    [SerializeField]
-    private bool isOpen;
+    [SerializeField] private Animator animator;
+    [SerializeField] private bool isOpen;
 
     private const string OPEN_DOOR_DESCRIPTION = "Нажмите [E] чтобы <color=red>закрыть</color> дверь";
     private const string CLOSED_DOOR_DESCRIPTION = "Нажмите [E] чтобы <color=green>открыть</color> дверь";
