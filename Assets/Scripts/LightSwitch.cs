@@ -11,8 +11,8 @@ public class LightSwitch : MonoBehaviour, Interactable
     [SerializeField]
     private bool isOn;
 
-    private const string ON_LIGHT_DESCRIPTION = "Нажмите [E] чтобы <color=red>включить</color> свет";
-    private const string OFF_LIGHT_DESCRIPTION = "Нажмите [E] чтобы <color=green>выключить</color> свет";
+    private const string ON_LIGHT_DESCRIPTION = "Нажмите [E] чтобы <color=red>выключить</color> свет";
+    private const string OFF_LIGHT_DESCRIPTION = "Нажмите [E] чтобы <color=green>включить</color> свет";
 
     void Start()
     {
