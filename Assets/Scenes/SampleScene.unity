@@ -3037,11 +3037,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1189588991}
   m_Mesh: {fileID: 2619086233303812490, guid: 80ca9edd492b7c242bcc927801639cb7, type: 3}
---- !u!20 &1254606171 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 200047983385041763, guid: 56d12d80f80f5e74abe5ec8dab1fce63, type: 3}
-  m_PrefabInstance: {fileID: 1568269494}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1280551147
 GameObject:
   m_ObjectHideFlags: 0
@@ -3820,6 +3815,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 633995659718968552, guid: 56d12d80f80f5e74abe5ec8dab1fce63, type: 3}
+      propertyPath: interactionUI
+      value: 
+      objectReference: {fileID: 603031073}
+    - target: {fileID: 633995659718968552, guid: 56d12d80f80f5e74abe5ec8dab1fce63, type: 3}
+      propertyPath: interactionText
+      value: 
+      objectReference: {fileID: 826247398}
     - target: {fileID: 660396593116185290, guid: 56d12d80f80f5e74abe5ec8dab1fce63, type: 3}
       propertyPath: m_LocalPosition.x
       value: -148.5
@@ -3867,10 +3870,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8629399909752382751, guid: 56d12d80f80f5e74abe5ec8dab1fce63, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1697154897}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56d12d80f80f5e74abe5ec8dab1fce63, type: 3}
 --- !u!1 &1646672609
 GameObject:
@@ -4140,27 +4140,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1656835573}
   m_Mesh: {fileID: -8348532816835286044, guid: 80ca9edd492b7c242bcc927801639cb7, type: 3}
---- !u!1 &1697154896 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8629399909752382751, guid: 56d12d80f80f5e74abe5ec8dab1fce63, type: 3}
-  m_PrefabInstance: {fileID: 1568269494}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1697154897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1697154896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 236ad7da6abd2a548981236aed4c3eca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteraction
-  mainCam: {fileID: 1254606171}
-  interactionDistance: 10
-  interactionUI: {fileID: 603031073}
-  interactionText: {fileID: 826247398}
 --- !u!1 &1802767966
 GameObject:
   m_ObjectHideFlags: 0
