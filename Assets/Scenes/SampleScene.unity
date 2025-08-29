@@ -955,8 +955,6 @@ GameObject:
   m_Component:
   - component: {fileID: 351512226}
   - component: {fileID: 351512227}
-  - component: {fileID: 351512229}
-  - component: {fileID: 351512228}
   m_Layer: 0
   m_Name: Bed
   m_TagString: Untagged
@@ -1005,51 +1003,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.01, y: 0.004961497, z: 0.01817355}
-  m_Center: {x: 0, y: -0.0007752631, z: -0.0012762253}
---- !u!114 &351512228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 351512225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.SignalReceiver
-  m_Events:
-    m_Signals:
-    - {fileID: 11400000, guid: 930fe9546c0a3f14d925ad4ee10d2aaf, type: 2}
-    m_Events:
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 351512229}
-          m_TargetAssemblyTypeName: CutsceneObject, Assembly-CSharp
-          m_MethodName: set_enabled
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &351512229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 351512225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4eae82cbe02ed145bf498268ea474a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CutsceneObject
-  cutscene: {fileID: 2028287198}
+  m_Size: {x: 0.011081453, y: 0.0031359578, z: 0.01817355}
+  m_Center: {x: 0.0005407289, y: 0.0024364758, z: -0.0012762253}
 --- !u!1 &408491789
 GameObject:
   m_ObjectHideFlags: 0
@@ -2787,6 +2742,73 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 930811056}
   m_Mesh: {fileID: -8348532816835286044, guid: 80ca9edd492b7c242bcc927801639cb7, type: 3}
+--- !u!1 &961548991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 961548994}
+  - component: {fileID: 961548993}
+  - component: {fileID: 961548992}
+  m_Layer: 0
+  m_Name: Bed Cutscene Object
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &961548992
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961548991}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.014278303, y: 0.01277004, z: 0.022418642}
+  m_Center: {x: 0.00036690847, y: 0.00034739324, z: -0.0019648995}
+--- !u!114 &961548993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961548991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4eae82cbe02ed145bf498268ea474a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CutsceneObject
+  cutscene: {fileID: 2028287198}
+--- !u!4 &961548994
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961548991}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -154.506, y: 2.799996, z: -5.09}
+  m_LocalScale: {x: 700, y: 700, z: 700}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &962265172
 GameObject:
   m_ObjectHideFlags: 0
@@ -3102,9 +3124,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 351512229}
-          m_TargetAssemblyTypeName: CutsceneObject, Assembly-CSharp
-          m_MethodName: set_enabled
+        - m_Target: {fileID: 961548991}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3144,6 +3166,30 @@ MonoBehaviour:
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 1951949804}
+          m_TargetAssemblyTypeName: PlayerRotation, Assembly-CSharp
+          m_MethodName: setY
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 54
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 1951949804}
+          m_TargetAssemblyTypeName: PlayerRotation, Assembly-CSharp
+          m_MethodName: setX
+          m_Mode: 4
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4170,7 +4216,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8629399909752382751, guid: 56d12d80f80f5e74abe5ec8dab1fce63, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1951949801}
   m_SourcePrefab: {fileID: 100100000, guid: 56d12d80f80f5e74abe5ec8dab1fce63, type: 3}
 --- !u!1 &1646672609
 GameObject:
@@ -4624,6 +4673,39 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8629399909752382751, guid: 56d12d80f80f5e74abe5ec8dab1fce63, type: 3}
   m_PrefabInstance: {fileID: 1568269494}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1951949801
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951949800}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1951949804 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 190661816137347484, guid: 56d12d80f80f5e74abe5ec8dab1fce63, type: 3}
+  m_PrefabInstance: {fileID: 1568269494}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951949800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9414ce25e2bf8f1488f150c502989c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &1962866710
 GameObject:
   m_ObjectHideFlags: 0
@@ -4816,7 +4898,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2068969117965323546, guid: 8cb1917c511d7d74faae7a7584dd2816, type: 3}
       propertyPath: m_SceneBindings.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2068969117965323546, guid: 8cb1917c511d7d74faae7a7584dd2816, type: 3}
       propertyPath: m_SceneBindings.Array.data[4].key
@@ -4825,7 +4907,7 @@ PrefabInstance:
     - target: {fileID: 2068969117965323546, guid: 8cb1917c511d7d74faae7a7584dd2816, type: 3}
       propertyPath: m_SceneBindings.Array.data[5].key
       value: 
-      objectReference: {fileID: 2378036020080460886, guid: 574794492da9dd44fb8213bab0cdf1c3, type: 2}
+      objectReference: {fileID: -5400738916009870280, guid: 574794492da9dd44fb8213bab0cdf1c3, type: 2}
     - target: {fileID: 2068969117965323546, guid: 8cb1917c511d7d74faae7a7584dd2816, type: 3}
       propertyPath: m_SceneBindings.Array.data[6].key
       value: 
@@ -4857,7 +4939,7 @@ PrefabInstance:
     - target: {fileID: 2068969117965323546, guid: 8cb1917c511d7d74faae7a7584dd2816, type: 3}
       propertyPath: m_SceneBindings.Array.data[5].value
       value: 
-      objectReference: {fileID: 1076666357}
+      objectReference: {fileID: 1951949801}
     - target: {fileID: 2068969117965323546, guid: 8cb1917c511d7d74faae7a7584dd2816, type: 3}
       propertyPath: m_SceneBindings.Array.data[6].value
       value: 
@@ -4872,7 +4954,7 @@ PrefabInstance:
       objectReference: {fileID: 1076666357}
     - target: {fileID: 5841782618484919744, guid: 8cb1917c511d7d74faae7a7584dd2816, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -147.02666
+      value: -147.03
       objectReference: {fileID: 0}
     - target: {fileID: 5841782618484919744, guid: 8cb1917c511d7d74faae7a7584dd2816, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4880,7 +4962,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5841782618484919744, guid: 8cb1917c511d7d74faae7a7584dd2816, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.94183
+      value: 0.89
       objectReference: {fileID: 0}
     - target: {fileID: 5841782618484919744, guid: 8cb1917c511d7d74faae7a7584dd2816, type: 3}
       propertyPath: m_LocalRotation.w
@@ -29931,6 +30013,7 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 961548994}
   - {fileID: 410087041}
   - {fileID: 1568269494}
   - {fileID: 543450652317045844}

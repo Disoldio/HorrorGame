@@ -32,4 +32,12 @@ public class PlayerRotation : MonoBehaviour
         x += Input.GetAxis("Mouse X");
         return Quaternion.Euler(transform.rotation.x, x, 0);
     }
+    public void setY(float y)
+    {
+        x = y;
+    }
+    public void setX(float x)
+    {
+        y = x;
+    }
 }
